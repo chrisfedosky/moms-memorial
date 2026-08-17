@@ -1,22 +1,116 @@
-/* global.css */
-* {
-    margin: 0;
-    padding: 0;
+/* ── 1. Font ── */
+/* ── 2. Reset ── */
+*, *::before, *::after {
     box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+
+img, video {
+    max-width: 100%;
+    display: block;
+}
+
+/* ── 3. Variables ── */
+
+:root {
+    --primary-dark:     hsl(2, 53%, 12%);
+    --primary-mid:      hsl(2, 48%, 24%);
+    --primary:          hsl(2, 65%, 46%);
+    --primary-light:    hsl(2, 65%, 66%);
+    --accent:           hsl(108, 54%, 28%);
+    --accent-light:     hsl(108, 54%, 48%);
+    --accent-secondary: hsl(258, 51%, 55%);
+    --accent-secondary-light: hsl(258, 51%, 75%);
+    --tertiary:         hsl(25, 75%, 45%);
+    --tertiary-light:   hsl(25, 75%, 65%);
+    --bg-light:         hsl(2, 79%, 97%);
+    --bg:               hsl(2, 79%, 93%);
+    --bg-dark:          hsl(2, 79%, 87%);
+    --text:             hsl(0, 0%, 0%);
+    --text-muted:       hsl(2, 12%, 43%);
+    --white:        hsl(0, 0%, 100%);
+    --white-muted: hsl(0, 0%, 90%);
+
+    --shadow-s:
+            inset 0 1px 2px hsla(0, 0%, 100%, 0.1),
+            0 1px 2px hsla(0, 0%, 0%, 0.05),
+            0 2px 4px hsla(0, 0%, 0%, 0.01);
+    --shadow-m:
+            inset 0 1px 2px hsla(0, 0%, 100%, 0.1),
+            0 2px 4px hsla(0, 0%, 0%, 0.05),
+            0 4px 8px hsla(0, 0%, 0%, 0.1);
+    --shadow-l:
+            inset 0 1px 2px hsla(0, 0%, 100%, 0.1),
+            0 4px 6px hsla(0, 0%, 0%, 0.05),
+            0 6px 10px hsla(0, 0%, 0%, 0.1);
+
+    --radius:    14px;
+    --gap:       clamp(10px, 1.5vw, 16px);
+    --pad:       clamp(1rem, 4vw, 2.5rem);
+    --max-width: 1100px;
+}
+
+/* ── 4. Base ── */
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    /*---- Update Font maybe @font-face ----*/
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text);
     line-height: 1.6;
-    color: #333;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-size: clamp(1rem, 4vw, 1.23rem);
 }
 
-header, footer {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 20px 0;
+/*-- are h and p elements in need of individual styling here? --*/
+
+
+a { color: var(--primary);
+    text-decoration: none;
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ── 5. Layout shell ── */
 
 main {
-    padding: 20px;
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding: clamp(1.5rem, 4vw, 3rem) var(--pad);
+}
+
+/* ── 6. Header ── */
+/* ── 7. Nav ── */
+
+/* ── 8. Bento grid container ── */
+
+.bento-grid {
+    display: grid;
+    gap: var(--gap);
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    /* grid-template-columns and grid-template-areas
+       live in the page CSS files only */
+}
+
+/* ── 9. Cards ── */
+
+.card {
+    border-radius: var(--radius);
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid var(--text-muted);
+    height: 100%;
+    min-height: 120px;
 }
