@@ -13,16 +13,14 @@ img, video {
 /* ── 3. Variables ── */
 
 :root {
-    --primary-dark:     hsl(2, 53%, 12%);
-    --primary-mid:      hsl(2, 48%, 24%);
-    --primary:          hsl(2, 65%, 46%);
-    --primary-light:    hsl(2, 65%, 66%);
-    --accent:           hsl(108, 54%, 28%);
-    --accent-light:     hsl(108, 54%, 48%);
-    --accent-secondary: hsl(258, 51%, 55%);
-    --accent-secondary-light: hsl(258, 51%, 75%);
-    --tertiary:         hsl(25, 75%, 45%);
-    --tertiary-light:   hsl(25, 75%, 65%);
+    --primary-dark:     hsl(228, 56%, 6%);
+    --primary-mid:      hsl(228, 66%, 11%);
+    --primary:          hsl(228, 66%, 16%);
+    --primary-light:    hsl(228, 50%, 50%);
+    --secondary:        hsl(348, 66%, 16%);
+    --secondary-light:  hsl(348, 26%, 36%);
+    --tertiary:         hsl(108, 66%, 16%);
+    --tertiary-light:   hsl(108, 36%, 28%);
     --bg-light:         hsl(2, 79%, 97%);
     --bg:               hsl(2, 79%, 93%);
     --bg-dark:          hsl(2, 79%, 87%);
