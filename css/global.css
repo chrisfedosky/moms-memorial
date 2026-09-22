@@ -21,11 +21,11 @@ img, video {
     --secondary-light:  hsl(348, 26%, 36%);
     --tertiary:         hsl(108, 66%, 16%);
     --tertiary-light:   hsl(108, 36%, 28%);
-    --bg-light:         hsl(2, 79%, 97%);
-    --bg:               hsl(2, 79%, 93%);
-    --bg-dark:          hsl(2, 79%, 87%);
+    --bg-light:         hsl(228, 66%, 70%);
+    --bg:               hsl(228, 66%, 60%);
+    --bg-dark:          hsl(228, 66%, 50%);
     --text:             hsl(0, 0%, 0%);
-    --text-muted:       hsl(2, 12%, 43%);
+    --text-muted:       hsl(0, 0%, 15%);
     --white:        hsl(0, 0%, 100%);
     --white-muted: hsl(0, 0%, 90%);
 
@@ -99,7 +99,7 @@ a { color: var(--primary);
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* ── 5. Layout shell ── */
@@ -130,8 +130,90 @@ main {
 
 .card {
     border-radius: var(--radius);
-    padding: clamp(1.25rem, 3vw, 2rem);
+    padding: clamp(1.25rem, 3vw, 2rem) var(--pad);
     border: 1px solid var(--text-muted);
     height: 100%;
     min-height: 120px;
+}
+
+/* CARD INTRO */
+.card-intro {
+    background-color: var(--bg);
+}
+
+.card-intro p {
+    color: var(--secondary);
+}
+
+/* CARD CONTRIBUTION 1 */
+.card-contribution1 {
+    background-color: var(--bg-light);
+}
+
+.card-contribution1 h3 {
+    color: var(--tertiary);
+}
+
+.card-contribution1 p {
+    color: var(--text-muted);
+}
+
+/* CARD CONTRIBUTION 2 */
+.card-contribution2 {
+    background-color: var(--bg);
+}
+
+.card-contribution2 h3 {
+    color: var(--secondary-light);
+}
+
+.card-contribution2 a:hover {
+    color: var(--tertiary-light);
+}
+
+/* CARD CONTRIBUTION 3 */
+.card-contribution3 {
+    background-color: var(--bg);
+}
+
+.card-audio-player {
+    background-color: var(--white-muted);
+    padding: clamp(1.25rem, 3vw, 2rem) var(--pad);
+    border-radius: var(--radius);
+}
+
+.audio-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-label {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.audio-title {
+    color: var(--text);
+}
+
+.audio-control-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD CONTRIBUTION 4 */
+.card-contribution4  {
+    background-color: var(--bg);
+}
+
+.card-contribution4 h3 {
+    color: var(--secondary);
+}
+
+.card-contribution4 a:hover {
+    color: var(--tertiary-light);
 }
